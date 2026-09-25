@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gallery</title>
+    <!--
+      The first room's music, fetched from the moment the page opens.
+
+      It cannot be *decoded* until there is an AudioContext, and there is
+      no AudioContext until the player clicks — so the download used to
+      start on the click too, and five and a half megabytes later the
+      song arrived well into a room the player was already standing in.
+      Warming the HTTP cache while they read the entry gate means the
+      bytes are usually there before the click is.
+
+      Only this one. The other two are wanted minutes later at the
+      earliest, and racing them against the first room's would be taking
+      bandwidth from the thing that needs it now.
+    -->
+    <script type="module" crossorigin src="./assets/index-DSQkoPSn.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CrD7YGFo.css">
+  </head>
+  <body>
+    <canvas id="view"></canvas>
+    <div id="ui"></div>
+  </body>
+</html>
